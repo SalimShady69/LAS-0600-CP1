@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="MAIN" Id="{087590f6-5f57-49ec-9822-70209af8d63d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR
+	// Heartbeat signal to Rockwell PLC (Must Inc Every 100ms)
+	S2M_Heartbeat AT %Q* : USINT := 0;	
+	// Heartbeat signal from Rockwell PLC (Must Inc Every 100ms)
+	M2S_Heartbeat AT %I*: USINT := 0; 
+	// Heartbeat Duration (Typically 100ms)
+	HB_Dur : TIME := TIME#100MS;
+	// Flasher Frequency (Typically 10ms)  This is how fast the system will cycle Flashing Events
+	Flasher_Frequency : TIME := TIME#125MS;
+	
+	System_Flasher : Flasher;
+	
+	System_Flash : INT := 0;
+	
+	// Heartbeat Slave 2 Master (Update the Heartbeat counter every Heartbeat Cycle)
+	HBCtrS2M :HB_S2M;
+	
+	// Heartbeat Master 2 Slave Check (Must Change State every 3 Heartbeat Cycles)
+	HB_M2S : HB_M2S;	
+	Link_State_Slot_01 AT %I*: UINT;
+	
+	Link_State_Slot_02 AT %I*: UINT;
+	Link_State_Slot_03 AT %I*: UINT;
+	Link_State_Slot_04 AT %I*: UINT;
+	Run AT %Q* :BOOL := False;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[HBCtrS2M(Dur := HB_Dur, Counter := S2M_Heartbeat);		// Update the Heartbeat counter every time the Heartbeat Duration Elapses
+HB_M2S(Dur:= (HB_Dur*3), Counter := M2S_Heartbeat); 	// Check the Heartbeat Status of the Rockwell PLC (Must change states within 3 cycles of the Heartbeat Duration
+System_Flasher(Flash_Frequency:= Flasher_Frequency, Flasher := System_Flash);	// Create the System Flasher
+
+Run := HB_M2S.OK;
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="276" Count="2" />
+      <LineId Id="288" Count="1" />
+      <LineId Id="210" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
