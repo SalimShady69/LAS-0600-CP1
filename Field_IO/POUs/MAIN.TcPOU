@@ -27,7 +27,8 @@ VAR
 	Link_State_Slot_02 AT %I*: UINT;
 	Link_State_Slot_03 AT %I*: UINT;
 	Link_State_Slot_04 AT %I*: UINT;
-	Run AT %Q* :BOOL := False;
+	LAS_0600_Run AT %Q* :BOOL := FALSE;
+	LLU_0200_Run AT %Q* :BOOL := FALSE;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -35,8 +36,8 @@ END_VAR
 HB_M2S(Dur:= (HB_Dur*3), Counter := M2S_Heartbeat); 	// Check the Heartbeat Status of the Rockwell PLC (Must change states within 3 cycles of the Heartbeat Duration
 System_Flasher(Flash_Frequency:= Flasher_Frequency, Flasher := System_Flash);	// Create the System Flasher
 
-Run := HB_M2S.OK;
-]]></ST>
+LAS_0600_Run := HB_M2S.OK;
+LLU_0200_Run := HB_M2S.OK;]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="276" Count="2" />
