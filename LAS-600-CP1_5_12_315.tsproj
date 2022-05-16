@@ -14812,7 +14812,7 @@
 					<Name>Image</Name>
 				</Image>
 				<EtherCAT VirtualDeviceName="true">
-					<Redundancy Mode="2" DeviceDesc="SLOT-03-X601-Bottom (TwinCAT-Intel PCI Ethernet Adapter (Gigabit) #8)" Miniport="\DEVICE\{4C11D1EC-F779-4246-AB2D-DB0FE73ADC9A}"/>
+					<Redundancy Mode="2" DeviceDesc="SLOT-03-X601-Bottom (TwinCAT-Intel PCI Ethernet Adapter (Gigabit) #8)" Miniport="\DEVICE\{4C11D1EC-F779-4246-AB2D-DB0FE73ADC9A}" IpAddress="#xa9fe5c14" IpMask="#xa9fe5c14"/>
 					<SyncUnit Name="IO" NoDeleteIfUnused="true"/>
 					<SyncUnit Name="Safety" NoDeleteIfUnused="true"/>
 				</EtherCAT>
