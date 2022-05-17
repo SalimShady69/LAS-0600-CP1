@@ -266,9 +266,24 @@
 			</Project>
 		</Plc>
 		<Safety>
-			<Project GUID="{B273FDF8-77BD-45FA-A749-6810F842302E}" Name="Safety" PrjFilePath="Safety\Safety.splcproj" TmcFilePath="Safety\Safety.tmc" GeneralArchiveSettings="#x000f" TargetArchiveSettings="#x0007" FileArchiveSettings="#x000e">
+			<Project GUID="{B273FDF8-77BD-45FA-A749-6810F842302E}" Name="LLU_0200" PrjFilePath="LLU_0200\LLU_0200.splcproj" TmcFilePath="LLU_0200\LLU_0200.tmc" GeneralArchiveSettings="#x000f" TargetArchiveSettings="#x0007" FileArchiveSettings="#x000e">
 				<Instance Id="#x01010010" KeepUnrestoredLinks="2">
-					<Name>Safety Instance</Name>
+					<Name>LLU_0200 Instance</Name>
+					<TmcDesc GUID="{72A6D5B8-E98C-4604-8B90-09D1F8AB38A9}">
+						<Name>Safety</Name>
+						<InitSequence>PO</InitSequence>
+						<Contexts>
+							<Context>
+								<Id>1</Id>
+								<Name>Default</Name>
+							</Context>
+						</Contexts>
+					</TmcDesc>
+				</Instance>
+			</Project>
+			<Project GUID="{12C8E17C-AFB0-4D99-ACD7-DEA6BD13B331}" Name="LAS_0600" PrjFilePath="LAS_0600\LAS_0600.splcproj" TmcFilePath="LAS_0600\LAS_0600.tmc" GeneralArchiveSettings="#x000f" TargetArchiveSettings="#x0007" FileArchiveSettings="#x000e">
+				<Instance Id="#x01010020" KeepUnrestoredLinks="2">
+					<Name>LAS_0600 Instance</Name>
 					<TmcDesc GUID="{72A6D5B8-E98C-4604-8B90-09D1F8AB38A9}">
 						<Name>Safety</Name>
 						<InitSequence>PO</InitSequence>
@@ -23732,8 +23747,6 @@
 				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 35" Size="1" OffsA="7"/>
 				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 37"/>
 				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__10" VarB="StandardInputs^Standard Out Var 7" Size="1" OffsA="1"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" VarB="StandardInputs^Standard Out Var 56" Size="1" OffsA="4"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__30" VarB="StandardInputs^Standard Out Var 50" Size="1" OffsA="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BFIO_LLUB-0635_1 (EP2338-0002)">
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_11" VarB="Channel 10^Output" Size="1" OffsA="1"/>
@@ -24089,13 +24102,6 @@
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 28" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="5"/>
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 29" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="6"/>
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 36" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="7"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 49" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__30" Size="1" OffsB="2"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 52" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="1"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 53" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 54" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="6"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 55" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="5"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 57" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="3"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 58" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^LAS_0600_Slot-04 (EL1904)">
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionOutputs^Message_11 RxPDO" VarB="Module 1 (FSOES)^TxPDO^FSOE"/>
@@ -24104,10 +24110,10 @@
 				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-04 (EL1904)^Module 1 (FSOES)^RxPDO^FSOE" VarB="ConnectionInputs^Message_11 TxPDO"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0635_1 (EP1957-0022)">
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionOutputs^Message_38 RxPDO" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionInputs^Message_38 TxPDO" VarB="Module 1 (FSOE)^FSoE Outputs^FSOE"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0636_1 (EP1957-0022)">
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionOutputs^Message_39 RxPDO" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionInputs^Message_39 TxPDO" VarB="Module 1 (FSOE)^FSoE Outputs^FSOE"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0639_1  (EP1957-0022)">
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionInputs^Message_41 TxPDO" VarB="Module 1 (FSOE)^FSoE Outputs^FSOE"/>
@@ -24117,8 +24123,11 @@
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionInputs^Message_42 TxPDO" VarB="Module 1 (FSOE)^FSoE Outputs^FSOE"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0639_3 (EP1957-0022)">
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionInputs^Message_43 TxPDO" VarB="Module 1 (FSOE)^FSoE Outputs^FSOE"/>
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionOutputs^Message_43 RxPDO" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)">
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionInputs^Message_40 TxPDO" VarB="Module 1 (FSOES)^RxPDO^FSOE"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionOutputs^Message_40 RxPDO" VarB="Module 1 (FSOES)^TxPDO^FSOE"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-04-X600-X601 (EtherCAT)^BSIO-LASB-0622_1 (EP1957-0022)">
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionInputs^Message_15 TxPDO" VarB="Module 1 (FSOE)^FSoE Outputs^FSOE"/>
@@ -24235,11 +24244,10 @@
 				<Link VarA="MOVI_LLUB-0638 (MOVIMOT+MFE72A)^OutputData1 (Standard 10 PO)^PO 0010" VarB="Assembly 2 (Input/Output)^Inputs^Movi_17" Size="16" OffsB="144"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^Safety-Ctrl (EL6910)">
-				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Outputs^FSOE" VarB="ConnectionInputs^Message_38 TxPDO"/>
-				<Link VarA="BSIO_LLUB-0636_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Outputs^FSOE" VarB="ConnectionInputs^Message_39 TxPDO"/>
+				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE" VarB="ConnectionOutputs^Message_38 RxPDO"/>
+				<Link VarA="BSIO_LLUB-0636_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE" VarB="ConnectionOutputs^Message_39 RxPDO"/>
 				<Link VarA="BSIO_LLUB-0639_2 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE" VarB="ConnectionOutputs^Message_42 RxPDO"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)^Module 1 (FSOES)^RxPDO^FSOE" VarB="ConnectionInputs^Message_40 TxPDO"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE" VarB="ConnectionOutputs^Message_40 RxPDO"/>
+				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Outputs^FSOE" VarB="ConnectionInputs^Message_43 TxPDO"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIID^SLOT-04-X600-X601 (EtherCAT)">
