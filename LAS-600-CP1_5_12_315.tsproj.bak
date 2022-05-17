@@ -76,12 +76,12 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
-			<BitSize>1</BitSize>
+			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
+			<BitSize>2</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
 				<LBound>0</LBound>
-				<Elements>1</Elements>
+				<Elements>2</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
@@ -118,15 +118,6 @@
 			<ArrayInfo>
 				<LBound>0</LBound>
 				<Elements>1</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
-			<BitSize>2</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>2</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
@@ -10673,7 +10664,7 @@
 							<SyncMan>001000012600010001000000000100010001001026010000</SyncMan>
 							<SyncMan>001100012200010002000000000100010001001122010000</SyncMan>
 							<SyncMan>001255002400010003000000000000000200001224010000</SyncMan>
-							<SyncMan>001d57002000010004000000000000000200001d20010000</SyncMan>
+							<SyncMan>001d58002000010004000000000000000200001d20010000</SyncMan>
 							<SyncMan>002e00002400000003000000000000000000002e24000000</SyncMan>
 							<SyncMan>002f00002000000004000000000000000000002f20000000</SyncMan>
 							<Fmmu>0000000000000000001200020100000001000000060000000200000000000000</Fmmu>
@@ -10830,8 +10821,29 @@
 								<Entry Name="Standard Out Var 51" Index="#x7000" Sub="#x17">
 									<Type>BIT</Type>
 								</Entry>
+								<Entry Name="Standard Out Var 52" Index="#x7000" Sub="#x18">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Standard Out Var 53" Index="#x7000" Sub="#x19">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Standard Out Var 54" Index="#x7000" Sub="#x1a">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Standard Out Var 55" Index="#x7000" Sub="#x1b">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Standard Out Var 56" Index="#x7000" Sub="#x1c">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Standard Out Var 57" Index="#x7000" Sub="#x1d">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Standard Out Var 58" Index="#x7000" Sub="#x1e">
+									<Type>BIT</Type>
+								</Entry>
 								<Entry>
-									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="StandardOutputs" Index="#x17f0" InOut="1" Flags="#x2011" SyncMan="2">
@@ -23683,22 +23695,6 @@
 			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^MCP-IOLINK (EP6224-2022)">
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_301" VarB="Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[1]"/>
 			</OwnerB>
-			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^LAS_0600_Slot-01 (EL1018)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_1" VarB="Channel 5^Input" Size="1" OffsA="3"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^LAS_0600_Slot-02 (EL1018)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_2" VarB="Channel 6^Input" Size="1" OffsA="5"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^LAS_0600_Slot-03 (EL1018)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_3" VarB="Channel 1^Input"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_3" VarB="Channel 2^Input" Size="1" OffsA="1"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_3" VarB="Channel 3^Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_3" VarB="Channel 4^Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_3" VarB="Channel 5^Input" Size="1" OffsA="4"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_3" VarB="Channel 6^Input" Size="1" OffsA="5"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_3" VarB="Channel 7^Input" Size="1" OffsA="6"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_3" VarB="Channel 8^Input" Size="1" OffsA="7"/>
-			</OwnerB>
 			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^LAS_0600_Slot-04 (EL1904)">
 				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__11" VarB="Module 1 (FSOES)^TxPDO^FSOE^InputChannel4" Size="1" OffsA="3"/>
 			</OwnerB>
@@ -23710,18 +23706,18 @@
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_1" VarB="Channel 7^Output" Size="1" OffsA="6"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^Safety-Ctrl (EL6910)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_30" VarB="StandardInputs^Standard Out Var 50" Size="1" OffsA="1"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 30"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 31" Size="1" OffsA="1"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 32" Size="1" OffsA="2"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 33" Size="1" OffsA="3"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 34" Size="1" OffsA="4"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 35" Size="1" OffsA="5"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 36" Size="1" OffsA="6"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 37" Size="1" OffsA="7"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__10" VarB="StandardInputs^Standard Out Var 5"/>
-				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__10" VarB="StandardInputs^Standard Out Var 6" Size="1" OffsA="2"/>
+				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_30" VarB="StandardInputs^Standard Out Var 48"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 27" Size="1" OffsA="1"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 30" Size="1" OffsA="2"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 31" Size="1" OffsA="3"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 32" Size="1" OffsA="4"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 33" Size="1" OffsA="5"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 34" Size="1" OffsA="6"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 35" Size="1" OffsA="7"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO_2" VarB="StandardInputs^Standard Out Var 37"/>
 				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__10" VarB="StandardInputs^Standard Out Var 7" Size="1" OffsA="1"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" VarB="StandardInputs^Standard Out Var 56" Size="1" OffsA="4"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__30" VarB="StandardInputs^Standard Out Var 50" Size="1" OffsA="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BFIO_LLUB-0635_1 (EP2338-0002)">
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_11" VarB="Channel 10^Output" Size="1" OffsA="1"/>
@@ -23737,82 +23733,49 @@
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_12" VarB="Channel 14^Output" Size="1" OffsA="5"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_12" VarB="Channel 15^Output" Size="1" OffsA="6"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_12" VarB="Channel 9^Output"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_14" VarB="Channel 2^Input" Size="1" OffsA="1"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_14" VarB="Channel 3^Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_14" VarB="Channel 4^Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_14" VarB="Channel 5^Input" Size="1" OffsA="4"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_14" VarB="Channel 7^Input" Size="1" OffsA="6"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_14" VarB="Channel 8^Input" Size="1" OffsA="7"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0635_1 (EP1957-0022)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_33" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_33" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" Size="1" OffsA="7"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__33" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" Size="1" OffsA="7"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0636_1 (EP1957-0022)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" Size="1" OffsA="1"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" Size="1" OffsA="4"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" Size="1" OffsA="5"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" Size="1" OffsA="6"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" Size="1" OffsA="7"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" Size="1" OffsA="1"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" Size="1" OffsA="2"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" Size="1" OffsA="3"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" Size="1" OffsA="4"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" Size="1" OffsA="5"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" Size="1" OffsA="6"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__34" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" Size="1" OffsA="7"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0639_1  (EP1957-0022)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" Size="1" OffsA="1"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" Size="1" OffsA="4"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" Size="1" OffsA="5"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" Size="1" OffsA="1"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" Size="1" OffsA="2"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" Size="1" OffsA="4"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__35" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" Size="1" OffsA="5"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0639_2 (EP1957-0022)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" Size="1" OffsA="5"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" Size="1" OffsA="6"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" Size="1" OffsA="7"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" Size="1" OffsA="2"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" Size="1" OffsA="3"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" Size="1" OffsA="6"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__36" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" Size="1" OffsA="7"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0639_2 (EP2338-0002)">
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_13" VarB="Channel 10^Output" Size="1" OffsA="1"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_13" VarB="Channel 14^Output" Size="1" OffsA="5"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_13" VarB="Channel 15^Output" Size="1" OffsA="6"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_13" VarB="Channel 9^Output"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_15" VarB="Channel 2^Input" Size="1" OffsA="1"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_15" VarB="Channel 3^Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_15" VarB="Channel 4^Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_15" VarB="Channel 5^Input" Size="1" OffsA="4"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_15" VarB="Channel 8^Input" Size="1" OffsA="7"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^BSIO_LLUB-0639_3 (EP1957-0022)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_37" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_37" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_37" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" Size="1" OffsA="6"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_37" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" Size="1" OffsA="7"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__37" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__37" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" Size="1" OffsA="3"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__37" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" Size="1" OffsA="7"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^IOLINK_LLUB-0639_1 (EP6224-2022)">
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_301" VarB="Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[1]"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_302" VarB="Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[2]"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_307" VarB="Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[7]"/>
 			</OwnerB>
-			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^LLU-0200 Coupler (EK1100)^LLU_0200_Slot-01 (EL1018)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_10" VarB="Channel 1^Input"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_10" VarB="Channel 2^Input" Size="1" OffsA="1"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_10" VarB="Channel 5^Input" Size="1" OffsA="4"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_10" VarB="Channel 6^Input" Size="1" OffsA="5"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_10" VarB="Channel 7^Input" Size="1" OffsA="6"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^LLU-0200 Coupler (EK1100)^LLU_0200_Slot-02(EL1018)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_11" VarB="Channel 2^Input" Size="1" OffsA="1"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_11" VarB="Channel 3^Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_11" VarB="Channel 7^Input" Size="1" OffsA="6"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_11" VarB="Channel 8^Input" Size="1" OffsA="7"/>
-			</OwnerB>
-			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^LLU-0200 Coupler (EK1100)^LLU_0200_Slot-03 (EL1018)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_12" VarB="Channel 5^Input" Size="1" OffsA="4"/>
-			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)">
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_31" VarB="Module 1 (FSOES)^TxPDO^FSOE^InputChannel3" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_31" VarB="Module 1 (FSOES)^TxPDO^FSOE^InputChannel4" Size="1" OffsA="3"/>
+				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__31" VarB="Module 1 (FSOES)^TxPDO^FSOE^InputChannel4" Size="1" OffsA="3"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-03-X600-X601 (EtherCAT)^LLU-0200 Coupler (EK1100)^LLU_0200_Slot-05 (EL2008)">
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_10" VarB="Channel 2^Output" Size="1" OffsA="1"/>
@@ -23864,21 +23827,12 @@
 			<OwnerB Name="TIID^SLOT-04-X600-X601 (EtherCAT)^BFIO-LASB-0620_1 (EP2338-0002)">
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_3" VarB="Channel 14^Output" Size="1" OffsA="5"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_3" VarB="Channel 9^Output"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_5" VarB="Channel 3^Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_5" VarB="Channel 4^Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_5" VarB="Channel 5^Input" Size="1" OffsA="4"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-04-X600-X601 (EtherCAT)^BFIO-LASB-0622_1 (EP2338-0002)">
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_2" VarB="Channel 12^Output" Size="1" OffsA="3"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_2" VarB="Channel 13^Output" Size="1" OffsA="4"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_2" VarB="Channel 14^Output" Size="1" OffsA="5"/>
 				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Inputs^M2S_BFIO_2" VarB="Channel 9^Output"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_4" VarB="Channel 2^Input" Size="1" OffsA="1"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_4" VarB="Channel 3^Input" Size="1" OffsA="2"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_4" VarB="Channel 4^Input" Size="1" OffsA="3"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_4" VarB="Channel 5^Input" Size="1" OffsA="4"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_4" VarB="Channel 7^Input" Size="1" OffsA="6"/>
-				<Link VarA="BFIO (TC EtherNet/IP Slave)^Assembly 1 (Input/Output)^Outputs^S2M_BFIO_4" VarB="Channel 8^Input" Size="1" OffsA="7"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-04-X600-X601 (EtherCAT)^BSIO-LASB-0622_1 (EP1957-0022)">
 				<Link VarA="BSIO (TC EtherNet/IP Slave)^Assembly 3 (Input/Output)^Outputs^S2M_BSIO__13" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input"/>
@@ -24053,19 +24007,6 @@
 				<Link VarA="MCP-IOLINK (EP6224-2022)^Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[5]" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_305"/>
 				<Link VarA="MCP-IOLINK (EP6224-2022)^Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[6]" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_306"/>
 				<Link VarA="MCP-IOLINK (EP6224-2022)^Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[7]" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_307"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-01 (EL1018)^Channel 2^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_1"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-01 (EL1018)^Channel 3^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_1" Size="1" OffsB="1"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-01 (EL1018)^Channel 4^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_1" Size="1" OffsB="2"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-01 (EL1018)^Channel 6^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_1" Size="1" OffsB="4"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-01 (EL1018)^Channel 7^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_1" Size="1" OffsB="5"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-01 (EL1018)^Channel 8^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_1" Size="1" OffsB="6"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-02 (EL1018)^Channel 1^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_2"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-02 (EL1018)^Channel 2^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_2" Size="1" OffsB="1"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-02 (EL1018)^Channel 3^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_2" Size="1" OffsB="2"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-02 (EL1018)^Channel 4^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_2" Size="1" OffsB="3"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-02 (EL1018)^Channel 5^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_2" Size="1" OffsB="4"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-02 (EL1018)^Channel 7^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_2" Size="1" OffsB="6"/>
-				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-02 (EL1018)^Channel 8^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_2" Size="1" OffsB="7"/>
 				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-05 (EL2008)^Channel 3^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_1" Size="1" OffsB="2"/>
 				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-05 (EL2008)^Channel 4^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_1" Size="1" OffsB="3"/>
 				<Link VarA="PWR-Supply (EK1200)^LAS_0600_Slot-05 (EL2008)^Channel 8^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_1" Size="1" OffsB="7"/>
@@ -24079,9 +24020,16 @@
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 24" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="2"/>
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 25" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="3"/>
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 26" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="4"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 27" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="5"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 28" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="6"/>
-				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 29" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="7"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 28" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="5"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 29" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="6"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 36" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO_1" Size="1" OffsB="7"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 49" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__30" Size="1" OffsB="2"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 52" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="1"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 53" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 54" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="6"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 55" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="5"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 57" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="3"/>
+				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^StandardInputs^Standard Out Var 58" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__21" Size="1" OffsB="2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^LAS_0600_Slot-04 (EL1904)">
 				<Link VarA="PWR-Supply (EK1200)^Safety-Ctrl (EL6910)^ConnectionOutputs^Message_11 RxPDO" VarB="Module 1 (FSOES)^TxPDO^FSOE"/>
@@ -24127,65 +24075,46 @@
 		<OwnerA Name="TIID^SLOT-03-X600-X601 (EtherCAT)">
 			<OwnerB Name="TIID^Field_Network (TC3 EIP Adapter)^BFIO (TC EtherNet/IP Slave)">
 				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 14^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_11" Size="1" OffsB="5"/>
-				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 1^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_13"/>
-				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 2^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_13" Size="1" OffsB="1"/>
-				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 3^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_13" Size="1" OffsB="2"/>
-				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 4^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_13" Size="1" OffsB="3"/>
-				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 5^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_13" Size="1" OffsB="4"/>
-				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 6^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_13" Size="1" OffsB="5"/>
-				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 7^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_13" Size="1" OffsB="6"/>
-				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 8^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_13" Size="1" OffsB="7"/>
 				<Link VarA="BFIO_LLUB-0635_1 (EP2338-0002)^Channel 9^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_11"/>
 				<Link VarA="BFIO_LLUB-0636_1(EP2338-0002)^Channel 11^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_12" Size="1" OffsB="2"/>
 				<Link VarA="BFIO_LLUB-0636_1(EP2338-0002)^Channel 12^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_12" Size="1" OffsB="3"/>
 				<Link VarA="BFIO_LLUB-0636_1(EP2338-0002)^Channel 16^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_12" Size="1" OffsB="7"/>
-				<Link VarA="BFIO_LLUB-0636_1(EP2338-0002)^Channel 1^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_14"/>
-				<Link VarA="BFIO_LLUB-0636_1(EP2338-0002)^Channel 6^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_14" Size="1" OffsB="5"/>
-				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_33"/>
-				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_33" Size="1" OffsB="1"/>
-				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_33" Size="1" OffsB="2"/>
-				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_33" Size="1" OffsB="4"/>
-				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_33" Size="1" OffsB="5"/>
-				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_33" Size="1" OffsB="6"/>
-				<Link VarA="BSIO_LLUB-0639_1  (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_35" Size="1" OffsB="3"/>
-				<Link VarA="BSIO_LLUB-0639_1  (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_35" Size="1" OffsB="6"/>
-				<Link VarA="BSIO_LLUB-0639_1  (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_35" Size="1" OffsB="7"/>
-				<Link VarA="BSIO_LLUB-0639_2 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_36"/>
-				<Link VarA="BSIO_LLUB-0639_2 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_36" Size="1" OffsB="1"/>
-				<Link VarA="BSIO_LLUB-0639_2 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_36" Size="1" OffsB="4"/>
 				<Link VarA="BSIO_LLUB-0639_2 (EP2338-0002)^Channel 11^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_13" Size="1" OffsB="2"/>
 				<Link VarA="BSIO_LLUB-0639_2 (EP2338-0002)^Channel 12^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_13" Size="1" OffsB="3"/>
 				<Link VarA="BSIO_LLUB-0639_2 (EP2338-0002)^Channel 13^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_13" Size="1" OffsB="4"/>
 				<Link VarA="BSIO_LLUB-0639_2 (EP2338-0002)^Channel 16^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_13" Size="1" OffsB="7"/>
-				<Link VarA="BSIO_LLUB-0639_2 (EP2338-0002)^Channel 1^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_15"/>
-				<Link VarA="BSIO_LLUB-0639_2 (EP2338-0002)^Channel 6^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_15" Size="1" OffsB="5"/>
-				<Link VarA="BSIO_LLUB-0639_2 (EP2338-0002)^Channel 7^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_15" Size="1" OffsB="6"/>
-				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_37" Size="1" OffsB="1"/>
-				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_37" Size="1" OffsB="2"/>
-				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_37" Size="1" OffsB="4"/>
-				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_37" Size="1" OffsB="5"/>
 				<Link VarA="IOLINK_LLUB-0639_1 (EP6224-2022)^Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[0]" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_300"/>
 				<Link VarA="IOLINK_LLUB-0639_1 (EP6224-2022)^Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[3]" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_303"/>
 				<Link VarA="IOLINK_LLUB-0639_1 (EP6224-2022)^Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[4]" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_304"/>
 				<Link VarA="IOLINK_LLUB-0639_1 (EP6224-2022)^Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[5]" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_305"/>
 				<Link VarA="IOLINK_LLUB-0639_1 (EP6224-2022)^Module 4 (IO-Link Slave)^IO-Link Port2_out^Port2: process data[6]" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_306"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-01 (EL1018)^Channel 3^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_10" Size="1" OffsB="2"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-01 (EL1018)^Channel 4^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_10" Size="1" OffsB="3"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-01 (EL1018)^Channel 8^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_10" Size="1" OffsB="7"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-02(EL1018)^Channel 1^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_11"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-02(EL1018)^Channel 4^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_11" Size="1" OffsB="3"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-02(EL1018)^Channel 5^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_11" Size="1" OffsB="4"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-02(EL1018)^Channel 6^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_11" Size="1" OffsB="5"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-03 (EL1018)^Channel 1^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_12"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-03 (EL1018)^Channel 2^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_12" Size="1" OffsB="1"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-03 (EL1018)^Channel 3^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_12" Size="1" OffsB="2"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-03 (EL1018)^Channel 4^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_12" Size="1" OffsB="3"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-03 (EL1018)^Channel 6^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_12" Size="1" OffsB="5"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-03 (EL1018)^Channel 7^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_12" Size="1" OffsB="6"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-03 (EL1018)^Channel 8^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_12" Size="1" OffsB="7"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE^InputChannel1" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_31"/>
-				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE^InputChannel2" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_31" Size="1" OffsB="1"/>
 				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-05 (EL2008)^Channel 1^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_10"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Field_Network (TC3 EIP Adapter)^BSIO (TC EtherNet/IP Slave)">
+				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__33"/>
+				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__33" Size="1" OffsB="1"/>
+				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__33" Size="1" OffsB="2"/>
+				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__33" Size="1" OffsB="3"/>
+				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__33" Size="1" OffsB="4"/>
+				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__33" Size="1" OffsB="5"/>
+				<Link VarA="BSIO_LLUB-0635_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__33" Size="1" OffsB="6"/>
+				<Link VarA="BSIO_LLUB-0636_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__34"/>
+				<Link VarA="BSIO_LLUB-0639_1  (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__35"/>
+				<Link VarA="BSIO_LLUB-0639_1  (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__35" Size="1" OffsB="3"/>
+				<Link VarA="BSIO_LLUB-0639_1  (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__35" Size="1" OffsB="6"/>
+				<Link VarA="BSIO_LLUB-0639_1  (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__35" Size="1" OffsB="7"/>
+				<Link VarA="BSIO_LLUB-0639_2 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__36"/>
+				<Link VarA="BSIO_LLUB-0639_2 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__36" Size="1" OffsB="1"/>
+				<Link VarA="BSIO_LLUB-0639_2 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__36" Size="1" OffsB="4"/>
+				<Link VarA="BSIO_LLUB-0639_2 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__36" Size="1" OffsB="5"/>
+				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__37" Size="1" OffsB="1"/>
+				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__37" Size="1" OffsB="2"/>
+				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__37" Size="1" OffsB="4"/>
+				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__37" Size="1" OffsB="5"/>
+				<Link VarA="BSIO_LLUB-0639_3 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Channel 1.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__37" Size="1" OffsB="6"/>
+				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE^InputChannel1" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__31"/>
+				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE^InputChannel2" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__31" Size="1" OffsB="1"/>
+				<Link VarA="LLU-0200 Coupler (EK1100)^LLU_0200_Slot-04 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE^InputChannel3" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__31" Size="1" OffsB="2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Field_Network (TC3 EIP Adapter)^Movi_1 (TC EtherNet/IP Slave)">
 				<Link VarA="MOVI_LLUB-0241 (MOVIMOT+MFE72A)^OutputData1 (Standard 10 PO)^PO 0002" VarB="Assembly 2 (Input/Output)^Inputs^Movi_14" Size="16" OffsB="16"/>
@@ -24228,17 +24157,10 @@
 				<Link VarA="BFIO-LASB-0620_1 (EP2338-0002)^Channel 13^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_3" Size="1" OffsB="4"/>
 				<Link VarA="BFIO-LASB-0620_1 (EP2338-0002)^Channel 15^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_3" Size="1" OffsB="6"/>
 				<Link VarA="BFIO-LASB-0620_1 (EP2338-0002)^Channel 16^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_3" Size="1" OffsB="7"/>
-				<Link VarA="BFIO-LASB-0620_1 (EP2338-0002)^Channel 1^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_5"/>
-				<Link VarA="BFIO-LASB-0620_1 (EP2338-0002)^Channel 2^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_5" Size="1" OffsB="1"/>
-				<Link VarA="BFIO-LASB-0620_1 (EP2338-0002)^Channel 6^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_5" Size="1" OffsB="5"/>
-				<Link VarA="BFIO-LASB-0620_1 (EP2338-0002)^Channel 7^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_5" Size="1" OffsB="6"/>
-				<Link VarA="BFIO-LASB-0620_1 (EP2338-0002)^Channel 8^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_5" Size="1" OffsB="7"/>
 				<Link VarA="BFIO-LASB-0622_1 (EP2338-0002)^Channel 10^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_2" Size="1" OffsB="1"/>
 				<Link VarA="BFIO-LASB-0622_1 (EP2338-0002)^Channel 11^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_2" Size="1" OffsB="2"/>
 				<Link VarA="BFIO-LASB-0622_1 (EP2338-0002)^Channel 15^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_2" Size="1" OffsB="6"/>
 				<Link VarA="BFIO-LASB-0622_1 (EP2338-0002)^Channel 16^Output" VarB="Assembly 1 (Input/Output)^Inputs^M2S_BFIO_2" Size="1" OffsB="7"/>
-				<Link VarA="BFIO-LASB-0622_1 (EP2338-0002)^Channel 1^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_4"/>
-				<Link VarA="BFIO-LASB-0622_1 (EP2338-0002)^Channel 6^Input" VarB="Assembly 1 (Input/Output)^Outputs^S2M_BFIO_4" Size="1" OffsB="5"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Field_Network (TC3 EIP Adapter)^BSIO (TC EtherNet/IP Slave)">
 				<Link VarA="BSIO-LASB-0622_1 (EP1957-0022)^Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Channel 2.Input" VarB="Assembly 3 (Input/Output)^Outputs^S2M_BSIO__13" Size="1" OffsB="3"/>
