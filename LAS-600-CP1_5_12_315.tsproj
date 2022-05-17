@@ -23686,6 +23686,7 @@
 		<MappingInfo Identifier="{00000000-2001-0850-0020-5008A0000403}" Id="#x02030030"/>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-5008C0000403}" Id="#x02030010"/>
 		<MappingInfo Identifier="{00000000-0010-0304-1000-040310000403}" Id="#x02030070"/>
+		<MappingInfo Identifier="{08502001-0010-0304-0020-500810000403}" Id="#x02030080" Watchdog="00000000000000000000000000000000"/>
 		<MappingInfo Identifier="{03040050-0010-0304-5000-040310000403}" Id="#x02030060" Watchdog="040000000c0000000400000004000000"/>
 		<MappingInfo Identifier="{030400A0-0010-0304-A000-040310000403}" Id="#x020300b0" Watchdog="00000000001000000400000004000000"/>
 		<MappingInfo Identifier="{030400A0-0050-0304-A000-040350000403}" Id="#x020300a0" Watchdog="04000000040000000400000004000000"/>
@@ -24424,6 +24425,9 @@
 			<OwnerB Name="TIID^Field_Network (TC3 EIP Adapter)^BFIO (TC EtherNet/IP Slave)">
 				<Link VarA="PlcTask Inputs^MAIN.M2S_Heartbeat" VarB="Assembly 1 (Input/Output)^Inputs^Heartbeat"/>
 				<Link VarA="PlcTask Outputs^MAIN.S2M_Heartbeat" VarB="Assembly 1 (Input/Output)^Outputs^Heartbeat"/>
+			</OwnerB>
+			<OwnerB Name="TIID^SLOT-00 BACKPLANE (EtherCAT)^PWR-Supply (EK1200)^Safety-Ctrl (EL6910)">
+				<Link VarA="PlcTask Outputs^MAIN.LAS_0600_Run" VarB="StandardOutputs^Standard In Var 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^SLOT-01-X600-X601 (EtherCAT)">
 				<Link VarA="PlcTask Inputs^MAIN.Link_State_Slot_01" VarB="Inputs^DevState"/>
